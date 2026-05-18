@@ -9,7 +9,7 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("http://localhost:3001/create-pass-url", {
+      const response = await fetch("https://vpasses.onrender.com/create-pass-url", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
