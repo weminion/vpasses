@@ -9,12 +9,15 @@ function App() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("https://vpasses.onrender.com/create-pass-url", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const response = await fetch(
+        "https://vpasses.onrender.com/create-pass-url",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
         },
-      });
+      );
       if (!response.ok) throw new Error("Failed to get save URL");
       const data = await response.json();
 
@@ -92,7 +95,7 @@ function App() {
       </main>
 
       <footer className="footer">
-        <p>&copy; 2024 vPassed Demo. All rights reserved.</p>
+        <p>&copy; 2026 vPassed Demo. All rights reserved.</p>
       </footer>
     </div>
   );
