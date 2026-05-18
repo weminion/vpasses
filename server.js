@@ -4,7 +4,9 @@ const jwt = require('jsonwebtoken');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['https://vpasses.vercel.app', 'http://localhost:5173'],
+}));
 app.use(express.json());
 
 const PORT = 3001;
@@ -44,7 +46,7 @@ app.post('/create-pass-url', async (req, res) => {
             iss: credentials.client_email,
             aud: 'google',
             typ: 'savetowallet',
-            origins: [],
+            origins: ['https://vpasses.vercel.app'],
             payload: {
                 genericObjects: [passObject]
             }
