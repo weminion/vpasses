@@ -1,7 +1,5 @@
 node_modules/
 .env
-*.json
-!package.json
-!package-lock.json
+vpasses-496705-e80515465e53.json
 frontend/node_modules/
 frontend/dist/
